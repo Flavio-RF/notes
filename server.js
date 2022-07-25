@@ -1,7 +1,7 @@
 require("dotenv").config()
 const path = require("path")
 const express = require("express")
-app = express()
+const app = express()
 const PORT = process.env.APP_PORT || 3000;
 const registerWebsocket = require("./sockets");
 require("./db")()
