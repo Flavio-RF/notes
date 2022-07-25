@@ -1,5 +1,5 @@
 const socketIO = require('socket.io');
-const Note = require("./app/models/Note")
+const Note = require("./src/models/Note")
 
 // async function storeNotes(data) {
 //     const note = await Note.create({
