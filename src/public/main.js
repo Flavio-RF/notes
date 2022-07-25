@@ -9,7 +9,6 @@ let savedId = ""
 
 ///////////agrega una nota a la lista instantaneamente/////////////
 socket.on("loadNotes", (data) => {
-    console.log("nueva nota", data)
     appendNote(data)
 });
 const appendNote = note => {
@@ -38,7 +37,6 @@ const udpateNote = (id, title, description) => {
 ///////////listo las notas traidas del servidor/////////////
 socket.on("notesFounded", (data) => {
     renderNotes(data)
-    console.log("notas traidas", data)
 });
 
 ///////////personalizar cada nota/////////////

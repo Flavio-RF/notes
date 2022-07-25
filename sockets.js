@@ -53,11 +53,8 @@ module.exports = (server) => {
 
         socket.on("cliente:getnote", async (getData) => {
             try {
-                console.log(getData)
                 const note = await Note.findById(getData)
-                console.log(note)
                 io.emit("server:selectednote", note)
-
             } catch (error) {
                 io.emit("new-message-error", error)
             }
